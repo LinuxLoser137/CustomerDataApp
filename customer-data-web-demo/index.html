@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browser-based portfolio demo of the Northwind Customer Data App.">
+  <title>Northwind Customer Data App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">C# Desktop Project • Web Demo</p>
+      <h1>Northwind Customer Data App</h1>
+      <p class="intro">A browser-based version of my C# customer data application, demonstrating customer queries, data presentation, filtering, and responsive front-end development.</p>
+      <div class="tech-list" aria-label="Technologies used">
+        <span>C# original</span><span>SQL Server</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard" aria-labelledby="dashboard-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Interactive Demo</p>
+          <h2 id="dashboard-title">Customer Dashboard</h2>
+        </div>
+        <button id="resetButton" class="secondary-button" type="button">Reset Demo</button>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">Customer Count</span>
+          <strong id="customerCount" class="stat-number">—</strong>
+          <button id="countButton" type="button">Get Customer Count</button>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-label">Company Directory</span>
+          <strong class="stat-number">Names</strong>
+          <button id="namesButton" type="button">Get Customer Names</button>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-label">Contact Directory</span>
+          <strong class="stat-number">Last Names</strong>
+          <button id="lastNamesButton" type="button">Get Last Names</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="results-panel" aria-labelledby="results-title">
+      <div class="results-header">
+        <div>
+          <p class="eyebrow">Query Results</p>
+          <h2 id="results-title">Customer Records</h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Search customer records</span>
+          <input id="searchInput" type="search" placeholder="Search results…" autocomplete="off">
+        </label>
+      </div>
+
+      <p id="statusMessage" class="status-message" role="status">Choose an action above to display customer data.</p>
+      <div id="customerResults" class="customer-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="project-notes" aria-labelledby="about-title">
+      <p class="eyebrow">About This Version</p>
+      <h2 id="about-title">From Windows Forms to the Web</h2>
+      <p>The original application was created in C# using Windows Forms and a SQL Server Northwind database. This Netlify-ready version recreates its core features with sample Northwind-style records so employers can test the interface directly in a browser without installing software or connecting to a local database.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Savannah Young • Software Development Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
